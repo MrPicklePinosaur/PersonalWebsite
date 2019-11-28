@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title> PROJECTS </title>
-</head>
-<body>
+{% extends "portfolio/base.html" %}
+{% block content %}
 
-	{% for projects in projects %}
+	{% for p in projects %}
 
-		<p> </p>
+		<h3> {{ p.name }} </h3>
+		<p> <a href = {{ p.link }}> Project can be found here </a> <br>
+
+			{{ p.description}}
+
+		<p>
 
 	{% endfor %}
-	
-</body>
-</html>
+
+{% endblock content %}
