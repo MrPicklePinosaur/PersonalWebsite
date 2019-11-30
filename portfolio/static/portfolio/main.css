@@ -19,7 +19,12 @@ button {
 }
 
 header {
-	background: black;
+	background-color: black;
+	background-image: url('banner.png');
+	background-size: 100%
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 200px;
 	padding: 20px;
 }
 
@@ -49,12 +54,22 @@ footer {
 
 .nav-bar li {
 	display: inline-block;
-	margin-right: 20px 
+	margin-right: 20px;
 }
 
-.nav-bar li:hover {
-	color: blue;
+.nav-bar li a {
+	text-decoration: none;
+	color: white;
 }
+
+.nav-bar li a:hover {
+	color: rgb(200,200,200);
+}
+
+/*
+.nav-bar li a:active {
+	color: rgb(0,183,255);
+} */
 
 .title-bar {
 	margin: 0;
