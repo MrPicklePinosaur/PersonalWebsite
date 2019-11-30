@@ -19,7 +19,7 @@ button {
 }
 
 header {
-	background: rgb(78,78,78);
+	background: black;
 	padding: 20px;
 }
 
@@ -54,4 +54,28 @@ footer {
 
 .nav-bar li:hover {
 	color: blue;
+}
+
+.title-bar {
+	margin: 0;
+	margin-top: 20px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.title-bar li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#site-logo {
+	background-image: url('pinosaur.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 64px;
+	height: 64px;
+	text-indent: -99999999%;
+	border-radius: 50%;
+	position: relative;
+	top: -25px; /* fix this later, its a vary bad solution */
 }
