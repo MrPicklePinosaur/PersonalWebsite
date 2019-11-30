@@ -28,26 +28,30 @@ footer {
 }
 
 
-.flex-container {
+.flex-box {
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
 }
 
 
-.triple-section {
+.flex-box div {
 	background: rgb(52,52,52);
 	width: 100px;
 	margin: auto;
 }
 
-.navbar-ul {
+.nav-bar {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
-.navbar-li {
+.nav-bar li {
 	display: inline-block;
-	margin-right: 20px;
+	margin-right: 20px 
+}
+
+.nav-bar li:hover {
+	color: blue;
 }
