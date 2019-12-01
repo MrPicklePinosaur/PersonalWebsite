@@ -1,15 +1,20 @@
 {% extends "portfolio/base.html" %}
 {% block content %}
 
-	{% for p in projects %}
+	<section>
+		
+		{% for p in projects %}
 
-		<h3> {{ p.name }} </h3>
-		<p> <a href = {{ p.link }}> Project can be found here </a> <br>
+			<div class="card project-card">
+				<div class="card-body">
+					<h5 class="card-title">{{ p.name }}</h5>
+					<p class="card-text">{{ p.description}}</p>
+				</div>
 
-			{{ p.description}}
+			</div>
 
-		<p>
+		{% endfor %}
 
-	{% endfor %}
+	</section>
 
 {% endblock content %}
