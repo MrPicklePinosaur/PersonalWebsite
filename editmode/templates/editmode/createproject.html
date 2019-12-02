@@ -7,7 +7,7 @@
 			{% csrf_token %}
 			<fieldset class="form-group">
 				<legend class="border-bottom mb-4">Create Project</legend>
-				{{ form }}
+				{{ form.as_p }}
 			</fieldset>
 
 			<div class="form-group">
