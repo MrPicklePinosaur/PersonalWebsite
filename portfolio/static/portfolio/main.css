@@ -95,19 +95,18 @@ footer {
 
 .project-card {
 	color: black;
-	display: inline-block;
 	margin: 20px;
 }
 
-.custom-container {
+.debug-container {
 	color: white;
 	border: 1px solid red;
 }
 
-.custom-container div {
+.debug-container div {
 	border: 2px solid green;
 }
 
-.custom-container div div {
+.debug-container div div {
 	border: 2px solid blue;
 }

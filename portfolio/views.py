@@ -23,7 +23,12 @@ def projects(request):
 			'name': 'Soulless',
 			'link': 'github.pinosaur/soulless',
 			'description': 'platformer created for ludum dare 45'
-		}
+		},
+		{
+			'name': 'Shinobi Network',
+			'link': 'github.pinosaur/shinobi-network',
+			'description': 'multiplayer shooter created with libgdx'
+		},
 	]
 
 	context = {

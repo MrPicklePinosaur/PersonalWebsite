@@ -1,20 +1,33 @@
 {% extends "portfolio/base.html" %}
 {% block content %}
-
-	<section>
+	
+	<section style="padding:20px">
 		
-		{% for p in projects %}
+		<div class="container debug-container">
 
-			<div class="card project-card">
-				<div class="card-body">
-					<h5 class="card-title">{{ p.name }}</h5>
-					<p class="card-text">{{ p.description}}</p>
+			<div class="row">	
+				<div class="col">
+					{% if user.is_authenticated %}
+					<button type="button" class="btn btn-success">Add Project</button>
+					{% endif %}
 				</div>
-
 			</div>
 
-		{% endfor %}
+			<div class="row justify-content-start align-items-center">
+				{% for p in projects %}
+					<div class="col-md">
+						<button type="button" class="card project-card btn btn-white">
+							<div class="card-body">
+								<h5 class="card-title">{{ p.name }}</h5>
+								<p class="card-text">{{ p.description}}</p>
+							</div>
 
+						</button>
+					</div>
+				{% endfor %}
+			</div>
+
+		</div>
 	</section>
 
 {% endblock content %}
