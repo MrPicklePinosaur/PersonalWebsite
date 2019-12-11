@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
+from editmode.models import Project
 
 def home(request):
 
@@ -13,26 +13,8 @@ def about(request):
 
 def projects(request):
 
-	projects = [
-		{
-			'name': 'Shinobi Network',
-			'link': 'github.pinosaur/shinobi-network',
-			'description': 'multiplayer shooter created with libgdx'
-		},
-		{
-			'name': 'Soulless',
-			'link': 'github.pinosaur/soulless',
-			'description': 'platformer created for ludum dare 45'
-		},
-		{
-			'name': 'Shinobi Network',
-			'link': 'github.pinosaur/shinobi-network',
-			'description': 'multiplayer shooter created with libgdx'
-		},
-	]
-
 	context = {
-		'projects': projects
+		'projects': Project.objects.all()
 	}
 
 	return render(request, 'portfolio/projects.html', context)

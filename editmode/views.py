@@ -12,6 +12,14 @@ def createproject(request):
 		if form.is_valid(): #validate that the data we got was actually from the form
 			name = form.cleaned_data.get('name')
 			messages.success(request, f'{name} successfully created!') #display a msg
+
+			#save data to db
+			instance = form.save(commit=False) 
+
+			#this is where we can pull any data we want from instance
+
+			instance.save()
+
 			return redirect('portfolio-projects')
 	else:
 		form = forms.NewProjectForm()
