@@ -19,12 +19,15 @@ def projects(request):
 
 	return render(request, 'portfolio/projects.html', context)
 
-def project_info(request,slug):
+def project_info(request,project_slug):
 
 	#determine if slug was valid
+	proj = Project.objects.filter(slug=project_slug).first()
+
+	#TODO: check to see if its a valid slug (if the query that was returned is not NULL)
 
 	context = {
-		'project_info': slug
+		'info': proj #bad solution: make sure that the slug is unique later
 	}
-	
+
 	return render(request, 'portfolio/projectinfo.html', context)

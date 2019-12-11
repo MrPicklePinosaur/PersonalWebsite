@@ -1,6 +1,12 @@
 {% extends "portfolio/base.html" %}
 {% block content %}
 	
-	{{ project_info }}
+	{{ info.name }}
+
+	{{ info.summary}}
+
+	{{ info.description }}
+
+	<img src="{{ info.images }}">
 
 {% endblock content %}

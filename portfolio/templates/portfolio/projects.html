@@ -8,9 +8,9 @@
 			<div class="row">	
 				<div class="col">
 					{% if user.is_authenticated %}
-					<button type="button" class="btn btn-success">
-						<a href="{% url 'editmode-createproject' %}">Add Project</a>
-					</button>
+					<a href="{% url 'editmode-createproject' %}">
+						<button type="button" class="btn btn-success">Add Project</button>
+					</a>
 					{% endif %}
 				</div>
 			</div>
@@ -18,14 +18,16 @@
 			<div class="row justify-content-start align-items-center">
 				{% for p in projects %}
 					<div class="col-md">
+						
 						<button type="button" class="card project-card btn btn-white"> 
-							<a href='#'>
+							<a href='{{ p.slug }}'>
 								<div class="card-body">
 									<h5 class="card-title">{{ p.name }}</h5>
 									<p class="card-text">{{ p.description}}</p>
 								</div>
 							</a>
 						</button>
+						
 					</div>
 				{% endfor %}
 			</div>
